@@ -1,0 +1,183 @@
+[
+    {
+      "number": 1,
+      "question": "What does the expression 'functools.reduce(lambda x, y: x+y, range(5))' return?",
+      "options": ["10", "15", "It raises a TypeError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 2,
+      "question": "Which of these about list comprehensions is false?",
+      "options": ["They can replace most lambda functions", "They are more efficient than equivalent for-loops", "They can create lists from other lists", "They cannot contain conditional expressions"],
+      "correct_option": 4
+    },
+    {
+      "number": 3,
+      "question": "What does the 'else' keyword in a try-except block do?",
+      "options": ["Executes if the try block raises an error", "Is a syntax error; 'else' is not allowed", "Executes if the try block does not raise an error", "None of the above"],
+      "correct_option": 3
+    },
+    {
+      "number": 4,
+      "question": "What is the output of 'isinstance(True, int)'?",
+      "options": ["True", "False", "TypeError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 5,
+      "question": "What does 'list(zip(*[iter(range(6))]*2))' return?",
+      "options": ["[(0, 1), (2, 3), (4, 5)]", "[0, 1, 2, 3, 4, 5]", "A TypeError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 6,
+      "question": "What is the output of '[i for i in range(3, -1, -1)]'?",
+      "options": ["[3, 2, 1, 0]", "[3, 2, 1]", "[0, 1, 2, 3]", "SyntaxError"],
+      "correct_option": 1
+    },
+    {
+      "number": 7,
+      "question": "Which of these is not a valid way to create a dictionary?",
+      "options": ["dict([[1,2], [3,4]])", "{[1,2], [3,4]}", "dict(x=2, y=3)", "{1: 2, 3: 4}"],
+      "correct_option": 2
+    },
+    {
+      "number": 8,
+      "question": "What will 'print('Python'.join(['Cool', 'Code']))' output?",
+      "options": ["'CoolPythonCode'", "'Cool Code'", "SyntaxError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 9,
+      "question": "Which of these about classes in Python is true?",
+      "options": ["A class can contain multiple __init__ methods", "A class cannot inherit from multiple classes", "Private methods can be called outside the class", "Methods are objects"],
+      "correct_option": 4
+    },
+    {
+      "number": 10,
+      "question": "What does 'exec(\"for i in range(3): print(i)\")' do?",
+      "options": ["Prints 0, 1, 2 on separate lines", "Raises a SyntaxError", "Executes without printing anything", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 11,
+      "question": "How does Python treat dictionaries and sets when checking for membership?",
+      "options": ["Uses linear search for both", "Uses hash tables for both", "Uses binary search for both", "Dictionaries use hash tables, sets use binary search"],
+      "correct_option": 2
+    },
+    {
+      "number": 12,
+      "question": "Which is the correct way to define a generator function?",
+      "options": ["A function that only yields values", "A function decorated with @generator", "Any function in Python, as all functions are generators", "A function that returns an iterator"],
+      "correct_option": 1
+    },
+    {
+      "number": 13,
+      "question": "What is the output of '((lambda x: (x + 1))(2))'?",
+      "options": ["3", "2", "SyntaxError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 14,
+      "question": "In Python 3, what is the type of 'range(5)'?",
+      "options": ["List", "Generator", "Range object", "Tuple"],
+      "correct_option": 3
+    },
+    {
+      "number": 15,
+      "question": "Which statement about the GIL (Global Interpreter Lock) in Python is true?",
+      "options": ["It ensures only one thread runs in the interpreter, even on multi-core processors", "It doesn't exist in Python 3", "It allows multiple threads to run Python bytecode at once", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 16,
+      "question": "What does 'print({} is {})' output?",
+      "options": ["True", "False", "SyntaxError", "None of the above"],
+      "correct_option": 2
+    },
+    {
+      "number": 17,
+      "question": "Which of the following will not create a copy of a list?",
+      "options": ["list.copy()", "list[:]", "copy.deepcopy(list)", "list()"],
+      "correct_option": 4
+    },
+    {
+      "number": 18,
+      "question": "What is the output of 'print(0.1 + 0.2 == 0.3)'?",
+      "options": ["True", "False", "Depends on the Python version", "None of the above"],
+      "correct_option": 2
+    },
+    {
+      "number": 19,
+      "question": "What happens when 'del' is used on a list element?",
+      "options": ["The element is removed and the list is left with a None value in its place", "The element is removed and subsequent elements are shifted down", "It raises a ValueError", "None of the above"],
+      "correct_option": 2
+    },
+    {
+      "number": 20,
+      "question": "What is 'print((lambda x, y=2: x + y)(2))' output?",
+      "options": ["4", "2", "SyntaxError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 21,
+      "question": "Which Python statement creates a new set?",
+      "options": ["set() = {1, 2, 3}", "{}", "set = {1, 2, 3}", "set()"],
+      "correct_option": 4
+    },
+    {
+      "number": 22,
+      "question": "What is the result of 'bool(None)'?",
+      "options": ["True", "False", "None", "SyntaxError"],
+      "correct_option": 2
+    },
+    {
+      "number": 23,
+      "question": "How can you achieve function overloading in Python?",
+      "options": ["Python does not support function overloading", "Defining multiple functions with the same name and different arguments", "Using default arguments", "Both B and C are correct"],
+      "correct_option": 4
+    },
+    {
+      "number": 24,
+      "question": "What does the 'globals()' function return?",
+      "options": ["A list of all global variables", "A dictionary of the current global symbol table", "A list of names in the current local scope", "SyntaxError"],
+      "correct_option": 2
+    },
+    {
+      "number": 25,
+      "question": "What will be the output of the following code snippet: '\".join([\"a\", \"b\", \"c\"])'?",
+      "options": ["abc", "a.b.c", "a,b,c", "SyntaxError"],
+      "correct_option": 2
+    },
+    {
+      "number": 26,
+      "question": "In Python, what does the 'enumerate' function return?",
+      "options": ["A list", "A tuple", "An enumerate object", "A dictionary"],
+      "correct_option": 3
+    },
+    {
+      "number": 27,
+      "question": "What is the output of the following code: 'print((1, 2) + (3, 4))'?",
+      "options": ["(1, 2, 3, 4)", "[(1, 2), (3, 4)]", "SyntaxError", "None of the above"],
+      "correct_option": 1
+    },
+    {
+      "number": 28,
+      "question": "How is a class variable different from an instance variable in Python?",
+      "options": ["Class variables are shared across all instances of the class", "Instance variables can only be accessed within the class they are declared", "Class variables are initialized at runtime", "There is no difference"],
+      "correct_option": 1
+    },
+    {
+      "number": 29,
+      "question": "What does the 'pass' keyword do in Python?",
+      "options": ["Passes control to the next line of code outside the current block", "Acts as a placeholder for future code", "Immediately exits the current loop", "Raises a PassError"],
+      "correct_option": 2
+    },
+    {
+      "number": 30,
+      "question": "Which of the following is the correct way to use a slice for reversing a string 'str' in Python?",
+      "options": ["str[::-1]", "str.reverse()", "reversed(str)", "str[-1:0]"],
+      "correct_option": 1
+    }
+  ]
+    

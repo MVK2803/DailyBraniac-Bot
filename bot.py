@@ -28,7 +28,7 @@ def main():
     dp = updater.dispatcher
 
     # Register a command handler to trigger the poll
-    dp.add_handler(CommandHandler("poll", send_poll))
+    dp.add_handler(CommandHandler("start", send_poll))
 
     # Start the Bot
     updater.start_polling()
