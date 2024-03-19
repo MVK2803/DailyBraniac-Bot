@@ -13,7 +13,6 @@ def getPollDetails(poll_id):
     print(result)
     return result
 def addResponseToDB(userName,responseDetails):
-    
     result = firebase.post(f'/responses/{userName}', responseDetails)
     print(result)
     return result

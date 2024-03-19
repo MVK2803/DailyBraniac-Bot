@@ -1,22 +1,22 @@
 [
-    {
-      "number": 1,
-      "question": "What does the expression 'functools.reduce(lambda x, y: x+y, range(5))' return?",
-      "options": ["10", "15", "It raises a TypeError", "None of the above"],
-      "correct_option": 1
-    },
-    {
-      "number": 2,
-      "question": "Which of these about list comprehensions is false?",
-      "options": ["They can replace most lambda functions", "They are more efficient than equivalent for-loops", "They can create lists from other lists", "They cannot contain conditional expressions"],
-      "correct_option": 4
-    },
-    {
-      "number": 3,
-      "question": "What does the 'else' keyword in a try-except block do?",
-      "options": ["Executes if the try block raises an error", "Is a syntax error; 'else' is not allowed", "Executes if the try block does not raise an error", "None of the above"],
-      "correct_option": 3
-    },
+  {
+    "number": 1,
+    "question": "What does the expression 'functools.reduce(lambda x, y: x+y, range(5))' return?",
+    "options": ["10", "15", "It raises a TypeError", "None of the above"],
+    "correct_option": 1
+  },
+  {
+    "number": 2,
+    "question": "Which of these about list comprehensions is false?",
+    "options": ["They can replace most lambda functions", "They are more efficient than equivalent for-loops", "They can create lists from other lists", "They cannot contain conditional expressions"],
+    "correct_option": 4
+  },
+  {
+    "number": 3,
+    "question": "What does the 'else' keyword in a try-except block do?",
+    "options": ["Executes if the try block raises an error", "Is a syntax error; 'else' is not allowed", "Executes if the try block does not raise an error", "None of the above"],
+    "correct_option": 3
+  },
     {
       "number": 4,
       "question": "What is the output of 'isinstance(True, int)'?",
