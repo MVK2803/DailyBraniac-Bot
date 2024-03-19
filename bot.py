@@ -1,10 +1,13 @@
+#importing required libraries
 import json
 import random
-from telegram.ext import Updater, CommandHandler, Filters, PollAnswerHandler
+from telegram.ext import Updater, CommandHandler, PollAnswerHandler
 import datetime
 from dotenv import load_dotenv
 import os
-# Load questions from JSON file
+import db
+
+# Load questions from JSON file -replace with the question from ai prompt
 def load_questions(filename='questions.json'):
     with open(filename, 'r') as file:
         questions = json.load(file)
@@ -22,18 +25,24 @@ def send_poll(update, context):
                           type='quiz',
                           correct_option_id=question2['correct_option']-1) 
     print("Details of the poll")
-    #Fetching the details of the poll
-    pollDetails={"pollId":x.poll.id,"correctOption":x.poll.correct_option_id,"pollTime":x.date.date()}
-    #store the poll in a db with the pollId as the primary key
-    print(pollDetails)
+    print(x)
+    #Details of the poll to be stored in the DB
+    pollDetails={"pollId":int(x.poll.id),"pollQuestion":x.poll.question,"correctOption":int(x.poll.correct_option_id),"pollTime":x.date.date()}
+    #add the poll details to the firebasdb  
+    if db.addPollToDB(pollDetails):
+        print("Poll details added to the DB")
+    
+   
 #Handler to log the answers to the poll
 def answer_poll(update, context):
     message = update.poll_answer
-    user_id = message.user.username
-    answer = message.option_ids
-    # Log the answer
-    #Fetch the poll details from the db using the pollID and verify the answer in the db and store whether 1 or 0 in the responses db
-    
+    '''user_id = message.user.username
+    answer = message.option_ids'''
+    pollDetails=db.getPollDetails(int(message.poll_id))
+    correctResponse=int(pollDetails['correctOption']==message.option_ids[0])
+    userName=message.user.username
+    userPollResponse={"pollId":int(message.poll_id),"userResponse":correctResponse}
+    db.addResponseToDB(userName,userPollResponse)
     print(message)
 
 
