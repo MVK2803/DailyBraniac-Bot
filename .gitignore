@@ -3668,3 +3668,4 @@ bot_env/Lib/site-packages/urllib3-2.2.1.dist-info/licenses/LICENSE.txt
 bot_env/Scripts/normalizer.exe
 __pycache__/db.cpython-310.pyc
 __pycache__/firebase.cpython-310.pyc
+.venv
