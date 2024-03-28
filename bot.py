@@ -1,8 +1,9 @@
 #importing required libraries
 import json
 import random
-from telegram.ext import Updater, CommandHandler, PollAnswerHandler
-import datetime
+from telegram.ext import Updater, CommandHandler, PollAnswerHandler,CallbackContext
+from datetime import datetime
+from telegram import Update,Message,Chat
 from dotenv import load_dotenv
 import os
 import db
@@ -47,19 +48,36 @@ def answer_poll(update, context):
 
 
 def main():
-    # Load the .env file
+    # # Load the .env file
     
-    # Replace 'YOUR_TOKEN_HERE' with the token given by BotFather
-    updater = Updater("7164481370:AAHBkrULh_e058h5bUh2Jsc23sdeEKBf9MI", use_context=True)
+    # # Replace 'YOUR_TOKEN_HERE' with the token given by BotFather
+    # updater = Updater("7164481370:AAHBkrULh_e058h5bUh2Jsc23sdeEKBf9MI", use_context=True)
 
-    # Get the dispatcher to register handlers
+    # # Get the dispatcher to register handlers
+    # dp = updater.dispatcher
+
+    # # Register a command handler to trigger the poll and log the answers
+    # dp.add_handler(CommandHandler("start", send_poll))
+    # dp.add_handler(PollAnswerHandler(answer_poll))
+
+    # # Start the Bot
+    # updater.start_polling()
+    # updater.idle()
+    print("Runnig Bot")
+
+    updater = Updater("7164481370:AAHBkrULh_e058h5bUh2Jsc23sdeEKBf9MI", use_context=True)
     dp = updater.dispatcher
 
-    # Register a command handler to trigger the poll and log the answers
-    dp.add_handler(CommandHandler("start", send_poll))
-    dp.add_handler(PollAnswerHandler(answer_poll))
 
-    # Start the Bot
+    #dp.add_handler(PollAnswerHandler(answer_poll))
+
+    # Send a poll as soon as the bot starts
+    chat_id = "-4152204929"
+    context = CallbackContext.from_update(Update(0), dp)
+
+    send_poll(Update(0, message=Message(0,datetime.now(), chat=Chat(chat_id, ""))), context)
+
+    dp.add_handler(PollAnswerHandler(answer_poll))
     updater.start_polling()
     updater.idle()
 
